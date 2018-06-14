@@ -1,0 +1,522 @@
+page {
+   includeJS {
+
+      tarteaucitron = EXT:tarteaucitron/Resources/Public/Javascript/tarteaucitron/tarteaucitron.js
+      tarteaucitron {
+         excludeFromConcatenation = 1
+         disableCompression = 1
+         if.isTrue = {$plugin.tx_tarteaucitron.enable}
+      }
+
+      tarteaucitron_init < .tarteaucitron
+      tarteaucitron_init = EXT:tarteaucitron/Resources/Public/Javascript/tarteaucitron-init.js
+   }
+
+
+   # Language configuration
+   jsInline.12354 = TEXT
+   jsInline.12354 {
+      value = en
+      wrap = var tarteaucitronForceLanguage = '|';
+   }
+   jsInline.12355 = RECORDS
+   jsInline.12355 {
+      tables = tt_content
+      source = {$plugin.tx_tarteaucitron.header_content_uid}
+      source = 54302
+      dontCheckPid = 1
+      if.isGreaterThan = {$plugin.tx_tarteaucitron.header_content_uid}
+      if.value = 0
+      stdWrap.wrap = var tarteaucitronHeaderContent = |;
+      stdWrap.encodeForJavaScriptValue = 1
+   }
+
+   footerData {
+      12354 = COA
+      12354 {
+
+         wrap = <!-- TARTE AU CITRON - Start -->|<!-- TARTE AU CITRON - End -->
+         if.isTrue = {$plugin.tx_tarteaucitron.enable}
+
+         10 = COA
+         10 {
+            10 = TEXT
+            20 = TEXT
+            30 = TEXT
+            40 = TEXT
+            50 = TEXT
+            60 = TEXT
+            70 = TEXT
+            80 = TEXT
+            90 = TEXT
+
+            100 = TEXT
+            100.value = (tarteaucitron.job = tarteaucitron.job || []).push('
+            101 = TEXT
+            101.value = amazon
+            102 = TEXT
+            102.value = ');
+            
+            wrap = <script type="text/javascript">|</script>
+            if.isTrue = {$plugin.tx_tarteaucitron.amazon}
+         }
+
+         20 < .10
+         20 {
+            101.value = clicmanager
+            if.isTrue = {$plugin.tx_tarteaucitron.clicmanager}
+         }
+
+         30 < .10
+         30 {
+            101.value = criteo
+            if.isTrue = {$plugin.tx_tarteaucitron.criteo}
+         }
+
+         40 < .10
+         40 {
+            101.value = datingaffiliation
+            wrap = <script type="text/javascript">|</script>
+            if.isTrue = {$plugin.tx_tarteaucitron.dating_affiliation}
+         }
+
+         50 < .10
+         50 {
+            101.value = datingaffiliationpopup
+            wrap = <script type="text/javascript">|</script>
+            if.isTrue = {$plugin.tx_tarteaucitron.dating_affiliation_popup}
+         }
+
+         60 < .10
+         60 {
+            101.value = ferankpub
+            if.isTrue = {$plugin.tx_tarteaucitron.ferank_pub}
+         }
+
+         70 < .10
+         70 {
+            101.value = adsense
+            if.isTrue = {$plugin.tx_tarteaucitron.google_adsense}
+         }
+
+         80 < .10
+         80 {
+            101.value = adsensesearchform
+            if.isTrue = {$plugin.tx_tarteaucitron.google_adsense_search_form}
+         }
+
+         90 < .10
+         90 {
+            10.value = tarteaucitron.user.adsensesearchresultCx = '{$plugin.tx_tarteaucitron.google_adsense_search_result_cx}';
+            101.value = adsensesearchresult
+            if.isTrue = {$plugin.tx_tarteaucitron.google_adsense_search_result}
+         }
+
+         100 < .10
+         100 {
+            101.value = googleadwordsconversion
+            if.isTrue = {$plugin.tx_tarteaucitron.google_adwords_conversion}
+         }
+
+         110 < .10
+         110 {
+            10.value = tarteaucitron.user.adwordsremarketingId = {$plugin.tx_tarteaucitron.google_adwords_remarketing_id};
+            101.value = googleadwordsremarketing
+            if.isTrue = {$plugin.tx_tarteaucitron.google_adwords_remarketing}
+         }
+
+         120 < .10
+         120 {
+            101.value = googlepartners
+            if.isTrue = {$plugin.tx_tarteaucitron.google_partners_badge}
+         }
+
+         130 < .10
+         130 {
+            101.value = prelinker
+            if.isTrue = {$plugin.tx_tarteaucitron.prelinker}
+         }
+
+         140 < .10
+         140 {
+            101.value = pubdirecte
+            if.isTrue = {$plugin.tx_tarteaucitron.pubdirecte}
+         }
+
+         150 < .10
+         150 {
+            101.value = shareasale
+            if.isTrue = {$plugin.tx_tarteaucitron.shareasale}
+         }
+
+         160 < .10
+         160 {
+            101.value = twenga
+            if.isTrue = {$plugin.tx_tarteaucitron.twenga}
+         }
+
+         170 < .10
+         170 {
+            101.value = vshop
+            if.isTrue = {$plugin.tx_tarteaucitron.vshop}
+         }
+
+         180 < .10
+         180 {
+            101.value = jsapi
+            if.isTrue = {$plugin.tx_tarteaucitron.google_jsapi}
+         }
+
+         190 < .10
+         190 {
+            10.value =  tarteaucitron.user.googlemapsKey = '{$plugin.tx_tarteaucitron.google_maps_apikey}';
+            101.value = googlemaps
+            if.isTrue = {$plugin.tx_tarteaucitron.google_maps}
+         }
+
+         200 < .10
+         200 {
+            10.value = tarteaucitron.user.googletagmanagerId = '{$plugin.tx_tarteaucitron.google_tag_manager_id}';
+            101.value = googletagmanager
+            if.isTrue = {$plugin.tx_tarteaucitron.google_tag_manager}
+         }
+
+         210 < .10
+         210 {
+            101.value = timelinejs
+            if.isTrue = {$plugin.tx_tarteaucitron.timeline_js}
+         }
+
+         220 < .10
+         220 {
+            101.value = typekit
+            if.isTrue = {$plugin.tx_tarteaucitron.typekit_adobe}
+         }
+
+         230 < .10
+         230 {
+            10.value = tarteaucitron.user.alexaAccountID = '{$plugin.tx_tarteaucitron.alexa_account_id}';
+            101.value = alexa
+            if.isTrue = {$plugin.tx_tarteaucitron.alexa}
+         }
+
+         240 < .10
+         240 {
+            10.value = tarteaucitron.user.clickyId = {$plugin.tx_tarteaucitron.clicky_id};
+            20.value = tarteaucitron.user.clickyMore = function () { /* add here your optionnal clicky function */ };
+            101.value = clicky
+            if.isTrue = {$plugin.tx_tarteaucitron.clicky}
+         }
+
+         250 < .10
+         250 {
+            10.value = tarteaucitron.user.crazyeggId = '{$plugin.tx_tarteaucitron.crazy_egg_account_id}';
+            101.value = crazy_egg
+            if.isTrue = {$plugin.tx_tarteaucitron.crazy_egg}
+         }
+
+         260 < .10
+         260 {
+            10.value = tarteaucitron.user.etracker = '{$plugin.tx_tarteaucitron.etracker_data_secure_code}';
+            101.value = etracker
+            if.isTrue = {$plugin.tx_tarteaucitron.etracker}
+         }
+
+         270 < .10
+         270 {
+            101.value = ferank
+            if.isTrue = {$plugin.tx_tarteaucitron.ferank}
+         }
+
+         280 < .10
+         280 {
+            10.value = tarteaucitron.user.getplusId = '{$plugin.tx_tarteaucitron.get_plus_account_id}';
+            101.value = getplus
+            if.isTrue = {$plugin.tx_tarteaucitron.get_plus}
+         }
+
+         290 < .10
+         290 {
+            10.value = tarteaucitron.user.gajsUa = '{$plugin.tx_tarteaucitron.google_analytics_ga_js_ua}';
+            20.value = tarteaucitron.user.gajsMore = function () {  /* add here your optionnal _ga.push() */ };
+            101.value = gajs
+            if.isTrue = {$plugin.tx_tarteaucitron.google_analytics_ga_js}
+         }
+
+         300 < .10
+         300 {
+            10.value = tarteaucitron.user.gtagUa = '{$plugin.tx_tarteaucitron.google_analytics_gtag_js_ua}';
+            20.value = tarteaucitron.user.gtagMore = function () { /* add here your optionnal gtag() */ };
+            101.value = gtag
+            if.isTrue = {$plugin.tx_tarteaucitron.google_analytics_gtag_js}
+         }
+
+         310 < .10
+         310 {
+            10.value = tarteaucitron.user.gtagUa = '{$plugin.tx_tarteaucitron.google_analytics_universal_ua}';
+            20.value = tarteaucitron.user.gtagMore = function () {/* add here your optionnal gtag() */};
+            101.value = analytics
+            if.isTrue = {$plugin.tx_tarteaucitron.google_analytics_universal}
+         }
+
+         320 < .10
+         320 {
+            101.value = criteo
+            value (
+               tarteaucitron.user.mauticurl = '{$plugin.tx_tarteaucitron.mautic_url}';
+	   	   	(tarteaucitron.job = tarteaucitron.job || []).push('mautic');
+            )
+            wrap = <script type="text/javascript">|</script>
+            if.isTrue = {$plugin.tx_tarteaucitron.mautic}
+         }
+
+         330 < .10
+         330 {
+            101.value = microsoftcampaignanalytics
+            if.isTrue = {$plugin.tx_tarteaucitron.microsoft_campaign_analytics}
+         }
+
+         340 < .10
+         340 {
+            101.value = statcounter
+            if.isTrue = {$plugin.tx_tarteaucitron.statcounter}
+         }
+
+         350 < .10
+         350 {
+            10.value = tarteaucitron.user.visualrevenueId = {$plugin.tx_tarteaucitron.visualrevenue_id};
+            101.value = visualrevenue
+            if.isTrue = {$plugin.tx_tarteaucitron.visualrevenue}
+         }
+
+         360 < .10
+         360 {
+            101.value = wysistat
+            if.isTrue = {$plugin.tx_tarteaucitron.wysistat}
+         }
+
+         370 < .10
+         370 {
+            10.value = tarteaucitron.user.xitiId = '{$plugin.tx_tarteaucitron.xiti_id}';
+            20.value = tarteaucitron.user.xitiMore = function () { /* add here your optionnal xiti function */ };
+            101.value = xiti
+            if.isTrue = {$plugin.tx_tarteaucitron.xiti}
+         }
+
+         380 < .10
+         380 {
+            10.value = tarteaucitron.user.disqusShortname = '{$plugin.tx_tarteaucitron.disqus_shortname}';
+            101.value = disqus
+            if.isTrue = {$plugin.tx_tarteaucitron.disqus}
+         }
+
+         390 < .10
+         390 {
+            101.value = facebookcomment
+            if.isTrue = {$plugin.tx_tarteaucitron.facebook_commentaire}
+         }
+
+         400 < .10
+         400 {
+            10.value (
+            var tarteaucitron_interval = setInterval(function() {
+               if (typeof tarteaucitron.services.iframe.name == 'undefined') {
+                   return;
+               }
+               clearInterval(tarteaucitron_interval);
+
+               tarteaucitron.services.iframe.name = 'name';
+               tarteaucitron.services.iframe.uri = 'privacy url';
+               tarteaucitron.services.iframe.cookies = ['cookie 1', 'cookie 2'];
+               }
+            , 10);
+            )
+            101.value = iframe
+            if.isTrue = {$plugin.tx_tarteaucitron.iframe}
+         }
+
+         410 < .10
+         410 {
+            10.value = tarteaucitron.user.addthisPubId = '{$plugin.tx_tarteaucitron.addthis_pubid}';
+            101.value = addthis
+            if.isTrue = {$plugin.tx_tarteaucitron.addthis}
+         }
+
+         420 < .10
+         420 {
+            10.value = tarteaucitron.user.addtoanyfeedUri = '{$plugin.tx_tarteaucitron.addtoany_feed_uri}';
+            101.value = addtoanyfeed
+            if.isTrue = {$plugin.tx_tarteaucitron.addtoany_feed}
+         }
+
+         430 < .10
+         430 {
+            101.value = addtoanyshare
+            if.isTrue = {$plugin.tx_tarteaucitron.addtoany_share}
+         }
+
+         440 < .10
+         440 {
+            10.value = tarteaucitron.user.ekomiCertId = '{$plugin.tx_tarteaucitron.ekomi_certid}';
+            101.value = ekomi
+            if.isTrue = {$plugin.tx_tarteaucitron.ekomi}
+         }
+
+         450 < .10
+         450 {
+            101.value = facebook
+            if.isTrue = {$plugin.tx_tarteaucitron.facebook}
+         }
+
+         460 < .10
+         460 {
+            101.value = facebooklikebox
+            if.isTrue = {$plugin.tx_tarteaucitron.facebook_like_box}
+         }
+
+         470 < .10
+         470 {
+            10.value = tarteaucitron.user.facebookpixelId = '{$plugin.tx_tarteaucitron.facebook_pixel_id}';
+            20.value = tarteaucitron.user.facebookpixelMore = function () { /* add here your optionnal facebook pixel function */ };
+            101.value = facebookpixel
+            if.isTrue = {$plugin.tx_tarteaucitron.facebook_pixel}
+         }
+
+         480 < .10
+         480 {
+            101.value = gplus
+            if.isTrue = {$plugin.tx_tarteaucitron.google_plus}
+         }
+
+         490 < .10
+         490 {
+            101.value = gplusbadge
+            if.isTrue = {$plugin.tx_tarteaucitron.google_plus_badge}
+         }
+
+         500 < .10
+         500 {
+            101.value = linkedin
+            if.isTrue = {$plugin.tx_tarteaucitron.linkedin}
+         }
+
+         510 < .10
+         510 {
+            101.value = pinterest
+            if.isTrue = {$plugin.tx_tarteaucitron.pinterest}
+         }
+
+         520 < .10
+         520 {
+            10.value = tarteaucitron.user.shareaholicSiteId = '{$plugin.tx_tarteaucitron.shareaholic_siteid}';
+            101.value = shareaholic
+            if.isTrue = {$plugin.tx_tarteaucitron.shareaholic}
+         }
+
+         530 < .10
+         530 {
+            10.value = tarteaucitron.user.sharethisPublisher = '{$plugin.tx_tarteaucitron.sharethis_publisher}';
+            101.value = sharethis
+            if.isTrue = {$plugin.tx_tarteaucitron.sharethis}
+         }
+
+         540 < .10
+         540 {
+            101.value = twitter
+            if.isTrue = {$plugin.tx_tarteaucitron.twitter}
+         }
+
+         550 < .10
+         550 {
+            101.value = twitterembed
+            if.isTrue = {$plugin.tx_tarteaucitron.twitter_cards}
+         }
+
+         560 < .10
+         560 {
+            101.value = twittertimeline
+            if.isTrue = {$plugin.tx_tarteaucitron.twitter_timelines}
+         }
+
+         570 < .10
+         570 {
+            10.value = tarteaucitron.user.purechatId = '{$plugin.tx_tarteaucitron.purechat_id}';
+            101.value = purechat
+            if.isTrue = {$plugin.tx_tarteaucitron.purechat}
+         }
+
+         580 < .10
+         580 {
+            10.value = tarteaucitron.user.userVoiceApi = '{$plugin.tx_tarteaucitron.uservoice_api}';
+            101.value = uservoice
+            if.isTrue = {$plugin.tx_tarteaucitron.uservoice}
+         }
+
+         590 < .10
+         590 {
+            10.value = tarteaucitron.user.zopimID = '{$plugin.tx_tarteaucitron.zopim_id}';
+            101.value = zopim
+            if.isTrue = {$plugin.tx_tarteaucitron.zopim}
+         }
+
+         600 < .10
+         600 {
+            101.value = calameo
+            if.isTrue = {$plugin.tx_tarteaucitron.calameo}
+         }
+
+         610 < .10
+         610 {
+            101.value = dailymotion
+            if.isTrue = {$plugin.tx_tarteaucitron.dailymotion}
+         }
+
+         620 < .10
+         620 {
+            101.value = prezi
+            if.isTrue = {$plugin.tx_tarteaucitron.prezi}
+         }
+
+         630 < .10
+         630 {
+            101.value = slideshare
+            if.isTrue = {$plugin.tx_tarteaucitron.slideshare}
+         }
+
+         640 < .10
+         640 {
+            101.value = vimeo
+            if.isTrue = {$plugin.tx_tarteaucitron.vimeo}
+         }
+
+         650 < .10
+         650 {
+            101.value = youtube
+            if.isTrue = {$plugin.tx_tarteaucitron.youtube}
+         }
+
+      }
+   }
+}
+
+
+# Francais
+[globalVar = GP:L = 1]
+   page.jsInline.12354.value = fr
+[GLOBAL]
+
+# German
+[globalVar = GP:L = 2]
+   page.jsInline.12354.value = de
+[GLOBAL]
+
+# Spanish
+[globalVar = GP:L = 3]
+   page.jsInline.12354.value = es
+[GLOBAL]
+
+# Italian
+[globalVar = GP:L = 4]
+   page.jsInline.12354.value = it
+[GLOBAL]
+

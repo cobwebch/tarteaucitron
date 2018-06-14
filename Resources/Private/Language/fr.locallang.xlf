@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="fr" date="2018-05-18T01:52:55Z" product-name="tarteaucitron">
+        <header/>
+        <body>
+            <trans-unit id="category.general">
+                <source>General</source>
+                <target>General</target>
+            </trans-unit>
+            <trans-unit id="category.apis">
+                <source>APIs</source>
+                <target>APIs</target>
+            </trans-unit>
+            <trans-unit id="category.advertising_network">
+                <source>Advertising network</source>
+                <targe>Régie publicitaire</targe>
+            </trans-unit>
+            <trans-unit id="category.audience_measurement">
+                <source>Audience measurement</source>
+                <target>Mesure d'audience</target>
+            </trans-unit>
+            <trans-unit id="category.comment">
+                <source>Comment</source>
+                <target>Commentaire</target>
+            </trans-unit>
+            <trans-unit id="other">
+                <source>Other</source>
+                <target>Autre</target>
+            </trans-unit>
+            <trans-unit id="category.social_network">
+                <source>Social network</source>
+                <target>Réseaux sociaux</target>
+            </trans-unit>
+            <trans-unit id="category.support">
+                <source>Support</source>
+                <target>Support</target>
+            </trans-unit>
+            <trans-unit id="category.video">
+                <source>Video</source>
+                <target>Vidéo</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

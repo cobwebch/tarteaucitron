@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-05-18T01:52:55Z" product-name="site_package">
+		<header/>
+		<body>
+			<trans-unit id="category.general">
+				<source>General</source>
+			</trans-unit>
+			<trans-unit id="category.apis">
+				<source>APIs</source>
+			</trans-unit>
+			<trans-unit id="category.advertising_network">
+				<source>Advertising network</source>
+			</trans-unit>
+			<trans-unit id="category.audience_measurement">
+				<source>Audience measurement</source>
+			</trans-unit>
+			<trans-unit id="category.comment">
+				<source>Comment</source>
+			</trans-unit>
+			<trans-unit id="other">
+				<source>Other</source>
+			</trans-unit>
+			<trans-unit id="category.social_network">
+				<source>Social network</source>
+			</trans-unit>
+			<trans-unit id="category.support">
+				<source>Support</source>
+			</trans-unit>
+			<trans-unit id="category.video">
+				<source>Video</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

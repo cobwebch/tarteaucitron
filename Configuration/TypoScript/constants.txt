@@ -1,0 +1,223 @@
+
+# customsubcategory=0_general=LLL:EXT:tarteaucitron/Resources/Private/Language/locallang.xlf:category.general
+# customsubcategory=1_apis=LLL:EXT:tarteaucitron/Resources/Private/Language/locallang.xlf:category.apis
+# customsubcategory=2_advertising_network=LLL:EXT:tarteaucitron/Resources/Private/Language/locallang.xlf:category.advertising_network
+# customsubcategory=3_audience_measurement=LLL:EXT:tarteaucitron/Resources/Private/Language/locallang.xlf:category.audience_measurement
+# customsubcategory=4_comment=LLL:EXT:tarteaucitron/Resources/Private/Language/locallang.xlf:category.comment
+# customsubcategory=5_other=LLL:EXT:tarteaucitron/Resources/Private/Language/locallang.xlf:other
+# customsubcategory=6_social_network=LLL:EXT:tarteaucitron/Resources/Private/Language/locallang.xlf:category.social_network
+# customsubcategory=7_support=LLL:EXT:tarteaucitron/Resources/Private/Language/locallang.xlf:category.support
+# customsubcategory=8_video=LLL:EXT:tarteaucitron/Resources/Private/Language/locallang.xlf:category.video
+
+plugin.tx_tarteaucitron {
+
+   # cat=tarteaucitron/0_general/101; type=boolean; label=Enable "Tarte Au Citron"
+   tarteaucitron = 0
+
+   # cat=tarteaucitron/0_general/102; type=int+; label=UID content element for Info box Header
+   header_content_uid = 0
+
+
+   # APIs
+   # cat=tarteaucitron/1_apis/101; type=boolean; label=Google jsapi : enabled
+   google_jsapi = 0
+   # cat=tarteaucitron/1_apis/102; type=boolean; label=Google Maps : enabled
+   google_maps = 0
+   # cat=tarteaucitron/1_apis/103; type=string; label=Google Maps : Api Key
+   google_maps_apikey = API KEY
+   # cat=tarteaucitron/1_apis/104; type=boolean; label=Google Tag Manager : enabled
+   google_tag_manager = 0
+   # cat=tarteaucitron/1_apis/105; type=string; label=Google Tag Manager : Id
+   google_tag_manager_id = GTM-XXXX
+   # cat=tarteaucitron/1_apis/106; type=boolean; label=Timeline JS : enabled
+   timeline_js = 0
+   # cat=tarteaucitron/1_apis/107; type=boolean; label=Typekit (adobe) : enabled
+   typekit_adobe = 0
+   
+   # Advertising network
+   # cat=tarteaucitron/2_advertising_network/201; type=boolean; label=Amazon : enabled
+   amazon = 0
+   # cat=tarteaucitron/2_advertising_network/202; type=boolean; label=Clicmanager : enabled
+   clicmanager = 0
+   # cat=tarteaucitron/2_advertising_network/203; type=boolean; label=Criteo : enabled
+   criteo = 0
+   # cat=tarteaucitron/2_advertising_network/204; type=boolean; label=Dating Affiliation : enabled
+   dating_affiliation = 0
+   # cat=tarteaucitron/2_advertising_network/205; type=boolean; label=Dating Affiliation (popup) : enabled
+   dating_affiliation_popup = 0
+   # cat=tarteaucitron/2_advertising_network/206; type=boolean; label=FERank (pub) : enabled
+   ferank_pub = 0
+   # cat=tarteaucitron/2_advertising_network/207; type=boolean; label=Google Adsense : enabled
+   google_adsense = 0
+   # cat=tarteaucitron/2_advertising_network/208; type=boolean; label=Google Adsense Search (form) : enabled
+   google_adsense_search_form = 0
+   # cat=tarteaucitron/2_advertising_network/209; type=boolean; label=Google Adsense Search (result) : enabled
+   google_adsense_search_result = 0
+   # cat=tarteaucitron/2_advertising_network/210; type=string; label= Google Adsense Search (result) : CX
+   google_adsense_search_result_cx = partner-pub-XXXXXXXXXXXXX:XXXXXXX
+   # cat=tarteaucitron/2_advertising_network/211; type=boolean; label=Google Adwords (conversion) : enabled
+   google_adwords_conversion = 0
+   # cat=tarteaucitron/2_advertising_network/212; type=boolean; label=Google Adwords (remarketing) : enabled
+   google_adwords_remarketing = 0
+   # cat=tarteaucitron/2_advertising_network/213; type=string; label= Google Adwords (remarketing) : Id
+   google_adwords_remarketing_id = id
+   # cat=tarteaucitron/2_advertising_network/214; type=boolean; label=Google Partners Badge : enabled
+   google_partners_badge = 0
+   # cat=tarteaucitron/2_advertising_network/215; type=boolean; label=Prelinker : enabled
+   prelinker = 0
+   # cat=tarteaucitron/2_advertising_network/216; type=boolean; label=Pubdirecte : enabled
+   pubdirecte = 0
+   # cat=tarteaucitron/2_advertising_network/217; type=boolean; label=ShareASale : enabled
+   shareasale = 0
+   # cat=tarteaucitron/2_advertising_network/218; type=boolean; label=Twenga : enabled
+   twenga = 0
+   # cat=tarteaucitron/2_advertising_network/219; type=boolean; label=vShop : enabled
+   vshop = 0
+
+
+   # Audience measurement
+   # cat=tarteaucitron/3_audience_measurement/301; type=boolean; label=Alexa : enabled
+   alexa = 0
+   # cat=tarteaucitron/3_audience_measurement/302; type=string; label=Alexa : account Id
+   alexa_account_id = account_id
+   # cat=tarteaucitron/3_audience_measurement/303; type=boolean; label=Clicky : enabled
+   clicky = 0
+   # cat=tarteaucitron/3_audience_measurement/304; type=string; label=Clicky : Id
+   clicky_id = account_id
+   # cat=tarteaucitron/3_audience_measurement/305; type=boolean; label=Crazy Egg : enabled
+   crazy_egg = 0
+   # cat=tarteaucitron/3_audience_measurement/306; type=string; label=Crazy Egg : account id
+   crazy_egg_account_id = account_id
+   # cat=tarteaucitron/3_audience_measurement/307; type=boolean; label=eTracker : enabled
+   etracker = 0
+   # cat=tarteaucitron/3_audience_measurement/308; type=string; label=eTracker : data secure code
+   etracker_data_secure_code = data-secure-code
+   # cat=tarteaucitron/3_audience_measurement/309; type=boolean; label=FERank : enabled
+   ferank = 0
+   # cat=tarteaucitron/3_audience_measurement/310; type=boolean; label=Get+ : enabled
+   get_plus = 0
+   # cat=tarteaucitron/3_audience_measurement/311; type=string; label=Get+ : account id
+   get_plus_account_id = ACCOUNT ID
+   # cat=tarteaucitron/3_audience_measurement/312; type=boolean; label=Google Analytics (ga.js) : enabled
+   google_analytics_ga_js = 0
+   # cat=tarteaucitron/3_audience_measurement/313; type=string; label=Google Analytics (ga.js) : UA
+   google_analytics_ga_js_ua = UA-XXXXXXXX-X
+   # cat=tarteaucitron/3_audience_measurement/314; type=boolean; label=Google Analytics (gtag.js) : enabled
+   google_analytics_gtag_js = 0
+   # cat=tarteaucitron/3_audience_measurement/315; type=string; label=Google Analytics (gtag.js) : UA
+   google_analytics_gtag_js_ua = UA-XXXXXXXX-X
+   # cat=tarteaucitron/3_audience_measurement/316; type=boolean; label=Google Analytics (universal) : enabled
+   google_analytics_universal = 0
+   # cat=tarteaucitron/3_audience_measurement/317; type=string; label=Google Analytics (universal) : UA
+   google_analytics_universal_ua = UA-XXXXXXXX-X
+   # cat=tarteaucitron/3_audience_measurement/318; type=boolean; label=Mautic : enabled
+   mautic = 0
+   # cat=tarteaucitron/3_audience_measurement/319; type=string; label=Mautic : url
+   mautic_url = mautic_url
+   # cat=tarteaucitron/3_audience_measurement/320; type=boolean; label=Microsoft Campaign Analytics : enabled
+   microsoft_campaign_analytics = 0
+   # cat=tarteaucitron/3_audience_measurement/321; type=boolean; label=StatCounter : enabled
+   statcounter = 0
+   # cat=tarteaucitron/3_audience_measurement/322; type=boolean; label=VisualRevenue : enabled
+   visualrevenue = 0
+   # cat=tarteaucitron/3_audience_measurement/323; type=string; label=VisualRevenue : ID
+   visualrevenue_id = ID
+   # cat=tarteaucitron/3_audience_measurement/324; type=boolean; label=Wysistat : enabled
+   wysistat = 0
+   # cat=tarteaucitron/3_audience_measurement/325; type=boolean; label=Xiti : enabled
+   xiti = 0
+   # cat=tarteaucitron/3_audience_measurement/326; type=string; label=Xiti : ID
+   xiti_id = YOUR ID
+
+
+   #Comment
+   # cat=tarteaucitron/4_comment/401; type=boolean; label=Disqus : enabled
+   disqus = 0
+   # cat=tarteaucitron/4_comment/402; type=string; label=Disqus : Shortname
+   disqus_shortname = disqus_shortname
+   # cat=tarteaucitron/4_comment/403; type=boolean; label=Facebook (comments) : enabled
+   facebook_commentaire = 0
+
+
+   #Other
+   # cat=tarteaucitron/5_other/501; type=boolean; label=iframe : enabled
+   iframe = 0
+
+
+   #Social network
+   # cat=tarteaucitron/6_social_network/601; type=boolean; label=AddThis : enabled
+   addthis = 0
+   # cat=tarteaucitron/6_social_network/602; type=string; label=AddThis : Pub Id
+   addthis_pubid = YOUR-PUB-ID
+   # cat=tarteaucitron/6_social_network/603; type=boolean; label=AddToAny (feed) : enabled
+   addtoany_feed = 0
+   # cat=tarteaucitron/6_social_network/604; type=string; label=AddToAny (feed) : URI
+   addtoany_feed_uri = feed_uri
+   # cat=tarteaucitron/6_social_network/605; type=boolean; label=AddToAny (share) : enabled
+   addtoany_share = 0
+   # cat=tarteaucitron/6_social_network/606; type=boolean; label=eKomi : enabled
+   ekomi = 0
+   # cat=tarteaucitron/6_social_network/607; type=string; label=eKomi : Cert Id
+   ekomi_certid = CERT-ID
+   # cat=tarteaucitron/6_social_network/608; type=boolean; label=Facebook : enabled
+   facebook = 0
+   # cat=tarteaucitron/6_social_network/609; type=boolean; label=Facebook (like box) : enabled
+   facebook_like_box = 0
+   # cat=tarteaucitron/6_social_network/610; type=boolean; label=Facebook Pixel : enabled
+   facebook_pixel = 0
+   # cat=tarteaucitron/6_social_network/611; type=string; label=Facebook Pixel : Id
+   facebook_pixel_id = YOUR-ID
+   # cat=tarteaucitron/6_social_network/612; type=boolean; label=Google+ : enabled
+   google_plus = 0
+   # cat=tarteaucitron/6_social_network/613; type=boolean; label=Google+ (badge) : enabled
+   google_plus_badge = 0
+   # cat=tarteaucitron/6_social_network/614; type=boolean; label=Linkedin : enabled
+   linkedin = 0
+   # cat=tarteaucitron/6_social_network/615; type=boolean; label=Pinterest : enabled
+   pinterest = 0
+   # cat=tarteaucitron/6_social_network/616; type=boolean; label=Shareaholic : enabled
+   shareaholic = 0
+   # cat=tarteaucitron/6_social_network/617; type=string; label=Shareaholic : Site Id
+   shareaholic_siteid = site_id
+   # cat=tarteaucitron/6_social_network/618; type=boolean; label=ShareThis : enabled
+   sharethis = 0
+   # cat=tarteaucitron/6_social_network/619; type=string; label=ShareThis : Publisher
+   sharethis_publisher = publisher
+   # cat=tarteaucitron/6_social_network/620; type=boolean; label=Twitter : enabled
+   twitter = 0
+   # cat=tarteaucitron/6_social_network/621; type=boolean; label=Twitter (cards) : enabled
+   twitter_cards = 0
+   # cat=tarteaucitron/6_social_network/622; type=boolean; label=Twitter (timelines) : enabled
+   twitter_timelines = 0
+
+
+   #Support
+   # cat=tarteaucitron/7_support/701; type=boolean; label=PureChat : enabled
+   purechat = 0
+   # cat=tarteaucitron/7_support/702; type=string; label=PureChat : Id
+   purechat_id = ID
+   # cat=tarteaucitron/7_support/703; type=boolean; label=UserVoice : enabled
+   uservoice = 0
+   # cat=tarteaucitron/7_support/704; type=string; label=UserVoice : Api
+   uservoice_api = YOUR_API_KEY
+   # cat=tarteaucitron/7_support/705; type=boolean; label=Zopim : enabled
+   zopim = 0
+   # cat=tarteaucitron/7_support/706; type=string; label=Zopim : Id
+   zopim_id = zopim_id
+
+
+   #Video
+   # cat=tarteaucitron/8_video/801; type=boolean; label=Calaméo : enabled
+   calameo = 0
+   # cat=tarteaucitron/8_video/802; type=boolean; label=Dailymotion : enabled
+   dailymotion = 0
+   # cat=tarteaucitron/8_video/803; type=boolean; label=Prezi : enabled
+   prezi = 0
+   # cat=tarteaucitron/8_video/804; type=boolean; label=SlideShare : enabled
+   slideshare = 0
+   # cat=tarteaucitron/8_video/805; type=boolean; label=Vimeo : enabled
+   vimeo = 0
+   # cat=tarteaucitron/8_video/806; type=boolean; label=Youtube : enabled
+   youtube = 0
+
+}

@@ -12,7 +12,7 @@
 plugin.tx_tarteaucitron {
 
    # cat=tarteaucitron/0_general/101; type=boolean; label=Enable "Tarte Au Citron"
-   tarteaucitron = 0
+   enable = 0
 
    # cat=tarteaucitron/0_general/102; type=int+; label=UID content element for Info box Header
    header_content_uid = 0
